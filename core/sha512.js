@@ -1,3 +1,5 @@
+define(["sjcl/core/sjcl"], function(sjcl) {
+
 /** @fileOverview Javascript SHA-512 implementation.
  *
  * This implementation was written for CryptoJS by Jeff Mott and adapted for
@@ -373,4 +375,4 @@ sjcl.hash.sha512.prototype = {
   }
 };
 
-
+});

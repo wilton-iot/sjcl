@@ -1,3 +1,6 @@
+define(["sjcl"], function(sjcl) { var res = [];
+
+res.push(
 new sjcl.test.TestCase("ECC convenience test", function (cb) {
   if (!sjcl.ecc) {
     this.unimplemented();
@@ -30,4 +33,6 @@ new sjcl.test.TestCase("ECC convenience test", function (cb) {
     this.fail(e);
   }
   cb && cb();
-});
+}));
+
+return res;});

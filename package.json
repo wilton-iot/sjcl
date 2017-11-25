@@ -2,7 +2,7 @@
   "name": "sjcl",
   "version": "1.0.7",
   "description": "Stanford Javascript Crypto Library",
-  "main": "sjcl.js",
+  "main": "index.js",
   "author": "bitwiseshiftleft",
   "keywords": [
     "encryption",
@@ -24,5 +24,22 @@
   "devDependencies": {
     "eslint": "^2.11.1",
     "jsdoc": "3.4.0"
+  },
+  "wilton": {
+    "excludes": [
+        "browserTest",
+        "compress",
+        "core/exports.js",
+        "core/codecZ85.js",
+        "demo",
+        "README",
+        "test",
+        "Makefile",
+        "config.mk",
+        "configure",
+        "jsdoc.conf.json",
+        "runAllTests.js",
+        "sjcl.js"
+    ]
   }
 }

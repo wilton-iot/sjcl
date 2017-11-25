@@ -1,3 +1,5 @@
+define(["sjcl/core/sjcl"], function(sjcl) {
+
 /** @fileOverview Really fast & small implementation of CCM using JS' array buffers
  *
  * @author Marco Munizaga
@@ -8,16 +10,6 @@
  * @namespace
  */
 sjcl.arrayBuffer = sjcl.arrayBuffer || {};
-
-//patch arraybuffers if they don't exist
-if (typeof(ArrayBuffer) === 'undefined') {
-  (function(globals){
-      "use strict";
-      globals.ArrayBuffer = function(){};
-      globals.DataView = function(){};
-  }(this));
-}
-
 
 sjcl.arrayBuffer.ccm = {
   mode: "ccm",
@@ -247,3 +239,5 @@ sjcl.arrayBuffer.ccm = {
   }
 
 };
+
+});

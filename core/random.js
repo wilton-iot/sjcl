@@ -1,3 +1,5 @@
+define(["sjcl/core/sjcl"], function(sjcl) {
+
 /** @fileOverview Random number generator.
  *
  * @author Emily Stark
@@ -522,3 +524,5 @@ sjcl.random = new sjcl.prng(6);
     }
   }
 }());
+
+});

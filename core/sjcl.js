@@ -1,3 +1,5 @@
+define([], function() {
+
 /** @fileOverview Javascript cryptography implementation.
  *
  * Crush to remove comments, shorten variable names and
@@ -101,3 +103,5 @@ var sjcl = {
     }
   }
 };
+
+return sjcl;});

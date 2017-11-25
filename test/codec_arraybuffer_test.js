@@ -1,3 +1,6 @@
+define(["sjcl"], function(sjcl) { var res = [];
+
+res.push(
 new sjcl.test.TestCase("arrayBuffer codec tests", function (cb) {
   if (!sjcl.codec.arrayBuffer) {
     this.unimplemented();
@@ -34,4 +37,6 @@ new sjcl.test.TestCase("arrayBuffer codec tests", function (cb) {
   });
 
   cb();
-});
+}));
+
+return res;});

@@ -1,16 +1,9 @@
+define(["sjcl/core/sjcl"], function(sjcl) {
+
 /** @fileOverview Bit array codec implementations.
  *
  * @author Marco Munizaga
  */
-
-//patch arraybuffers if they don't exist
-if (typeof(ArrayBuffer) === 'undefined') {
-  (function(globals){
-      "use strict";
-      globals.ArrayBuffer = function(){};
-      globals.DataView = function(){};
-  }(this));
-}
 
 /**
  * ArrayBuffer
@@ -114,3 +107,4 @@ sjcl.codec.arrayBuffer = {
   }
 };
 
+});

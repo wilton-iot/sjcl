@@ -1,3 +1,5 @@
+define(["sjcl/core/sjcl"], function(sjcl) {
+
 /**
  * Constructs a new bignum from another bignum, a number or a hex string.
  * @constructor
@@ -732,3 +734,5 @@ sjcl.bn.random = function(modulus, paranoia) {
     }
   }
 };
+
+});

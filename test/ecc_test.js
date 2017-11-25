@@ -1,3 +1,6 @@
+define(["sjcl", "sjcl/test/ecc_vectors"], function(sjcl) { var res = [];
+
+res.push(
 new sjcl.test.TestCase("ECC point multiplication test", function (cb) {
   if (!sjcl.ecc) {
     this.unimplemented();
@@ -17,4 +20,6 @@ new sjcl.test.TestCase("ECC point multiplication test", function (cb) {
   }
 
   cb && cb();
-});
+}));
+
+return res;});

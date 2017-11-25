@@ -1,3 +1,5 @@
+define(["sjcl/core/sjcl"], function(sjcl) {
+
 /** @fileOverview CTR mode implementation
  *
  * @author Torben Haase
@@ -70,3 +72,5 @@ sjcl.beware["CTR mode is dangerous because it doesn't protect message integrity.
     }
   };
 };
+
+});

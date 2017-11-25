@@ -1,3 +1,5 @@
+define(["sjcl"], function(sjcl) {
+
 sjcl.test.vector.bitArray = {};
 
 // random test cases generated with ruby String#to_i(radix) and Fixnum#to_s(radix)
@@ -161,3 +163,5 @@ sjcl.test.vector.bitArray.byteswap = [
   , [ 0x4ea4b1da, 0xdec3fd73, 0x006f6eed, 0x851b225d, 0xa487b9ad, 0x76da0ec2, 0x0c0dd4a0, 0x5796dad1, 0xf0eb5ed8, 0x6dc0f9d3, 0xb0391eca, 0xebead7cc, 0xd06bddb1, 0xe6a91573, 0xc4cacf77, 0x194c91f7, 0x5453c11b, 0xbcfa5a93, 0x75d3e93e, 0x5f098ad1]
   ]
 ];
+
+});

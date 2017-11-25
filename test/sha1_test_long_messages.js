@@ -1,3 +1,6 @@
+define(["sjcl", "sjcl/test/sha1_vectors_long_messages"], function(sjcl) { var res = [];
+
+res.push(
 new sjcl.test.TestCase("SHA-1 long messages", function (cb) {
   if (!sjcl.hash.sha1) {
     this.unimplemented();
@@ -11,4 +14,6 @@ new sjcl.test.TestCase("SHA-1 long messages", function (cb) {
     this.require(sjcl.codec.hex.fromBits(out) == kat[i][1], i);
   }
   cb && cb();
-});
+}));
+
+return res;});

@@ -1,3 +1,5 @@
+define(["sjcl/core/sjcl"], function(sjcl) {
+
 /** @fileOverview Bit array codec implementations.
  *
  * @author Emily Stark
@@ -38,3 +40,5 @@ sjcl.codec.bytes = {
     return out;
   }
 };
+
+});

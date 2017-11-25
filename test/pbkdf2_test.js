@@ -1,5 +1,8 @@
+define(["sjcl"], function(sjcl) { var res = [];
+
 /* From http://www.cryptosys.net/manapi/api_PBE_Kdf2.html */
 
+res.push(
 new sjcl.test.TestCase("PBKDF2", function (cb) {
   if (!sjcl.misc.pbkdf2 || !sjcl.misc.hmac || !sjcl.hash.sha256) {
     this.unimplemented();
@@ -13,4 +16,6 @@ new sjcl.test.TestCase("PBKDF2", function (cb) {
   output = h.fromBits(output);
   this.require(output.substr(0,goodOutput.length) == goodOutput);
   cb && cb();
-});
+}));
+
+return res;});

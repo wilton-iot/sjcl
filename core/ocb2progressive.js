@@ -1,3 +1,5 @@
+define(["sjcl/core/sjcl"], function(sjcl) {
+
 /**
  * OCB2.0 implementation slightly modified by Yifan Gu
  * to support progressive encryption
@@ -136,3 +138,5 @@ sjcl.mode.ocb2progressive = {
     };
   }
 };
+
+});

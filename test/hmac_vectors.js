@@ -1,3 +1,5 @@
+define(["sjcl"], function(sjcl) {
+
 /* Official HMAC test vectors. */
 //Nilos: http://tools.ietf.org/html/draft-nystrom-smime-hmac-sha-02 for
 sjcl.test.vector.hmac = [
@@ -26,3 +28,5 @@ sjcl.test.vector.hmac = [
   mac:  "9b09ffa71b942fcb27635fbcd5b0e944bfdc63644f0713938a7f51535c3a35e2"
 }
 ];
+
+});

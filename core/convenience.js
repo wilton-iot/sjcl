@@ -1,3 +1,5 @@
+define(["sjcl/core/sjcl"], function(sjcl) {
+
 /** @fileOverview Convenince functions centered around JSON encapsulation.
  *
  * @author Emily Stark
@@ -325,3 +327,5 @@ sjcl.misc.cachedPbkdf2 = function (password, obj) {
   c[salt] = c[salt] || sjcl.misc.pbkdf2(password, salt, obj.iter);
   return { key: c[salt].slice(0), salt:salt.slice(0) };
 };
+
+});

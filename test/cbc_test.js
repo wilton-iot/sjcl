@@ -1,3 +1,6 @@
+define(["sjcl", "sjcl/browserTest/browserUtil", "sjcl/test/cbc_vectors"], function(sjcl, browserUtil) { var res = [];
+
+res.push(
 new sjcl.test.TestCase("CBC mode tests", function (cb) {
   ((sjcl.beware &&
   sjcl.beware["CBC mode is dangerous because it doesn't protect message integrity."]) ||
@@ -30,4 +33,6 @@ new sjcl.test.TestCase("CBC mode tests", function (cb) {
     }
     cbb();
   }, 0, kat.length / 100, true, cb);
-});
+}));
+
+return res;});

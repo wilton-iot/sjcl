@@ -1,3 +1,6 @@
+define(["sjcl", "sjcl/browserTest/browserUtil", "sjcl/test/ocb2_vectors"], function(sjcl, browserUtil) { var res = [];
+
+res.push(
 new sjcl.test.TestCase("OCB 2.0 mode tests", function (cb) {
   if (!sjcl.cipher.aes || !sjcl.mode.ocb2) {
     this.unimplemented();
@@ -28,4 +31,6 @@ new sjcl.test.TestCase("OCB 2.0 mode tests", function (cb) {
     }
     cbb();
   }, 0, kat.length / 100, true, cb);
-});
+}));
+
+return res;});

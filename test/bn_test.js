@@ -1,3 +1,6 @@
+define(["sjcl", "sjcl/test/bn_vectors"], function(sjcl) { var res = [];
+
+res.push(
 new sjcl.test.TestCase("Bignum modular reduction test", function (cb) {
   if (!sjcl.bn) {
     this.unimplemented();
@@ -5,7 +8,7 @@ new sjcl.test.TestCase("Bignum modular reduction test", function (cb) {
     return;
   }
 
-  var a, N, r;
+  var a, N, r, i, tv;
   for (i=0; i < sjcl.test.vector.bn_mod.length; i++) {
     tv = sjcl.test.vector.bn_mod[i];
     try {
@@ -18,8 +21,9 @@ new sjcl.test.TestCase("Bignum modular reduction test", function (cb) {
     }
   }
   cb && cb();
-});
+}));
 
+res.push(
 new sjcl.test.TestCase("Bignum modular multiplication test", function (cb) {
   if (!sjcl.bn) {
     this.unimplemented();
@@ -41,8 +45,9 @@ new sjcl.test.TestCase("Bignum modular multiplication test", function (cb) {
     }
   }
   cb && cb();
-});
+}));
 
+res.push(
 new sjcl.test.TestCase("Bignum modular exponentiation test", function (cb) {
   if (!sjcl.bn) {
     this.unimplemented();
@@ -64,8 +69,9 @@ new sjcl.test.TestCase("Bignum modular exponentiation test", function (cb) {
     }
   }
   cb && cb();
-});
+}));
 
+res.push(
 new sjcl.test.TestCase("Bignum toString test", function (cb) {
   if (!sjcl.bn) {
     this.unimplemented();
@@ -75,4 +81,6 @@ new sjcl.test.TestCase("Bignum toString test", function (cb) {
   this.require((new sjcl.bn(12312434)).power(10).toString() ===
     '0xb99c06973dcc72429aa1dd41b0bc40a424289a05d3d72f066ee4e71c400');
   cb && cb();
-});
+}));
+
+return res;});

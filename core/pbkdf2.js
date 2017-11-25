@@ -1,3 +1,5 @@
+define(["sjcl/core/sjcl"], function(sjcl) {
+
 /** @fileOverview Password-based key-derivation function, version 2.0.
  *
  * @author Emily Stark
@@ -56,3 +58,5 @@ sjcl.misc.pbkdf2 = function (password, salt, count, length, Prff) {
 
   return out;
 };
+
+});

@@ -1,3 +1,5 @@
+define(["sjcl"], function(sjcl) {
+
 // Verify with Mathematica:
 //   BaseForm[Mod[16^^a, 16^^N], 16]
 // should return "16^^r".
@@ -80,3 +82,5 @@ sjcl.test.vector.bn_powermod = [
     v: "9c3219b694befb9caac51a13eb1ac7053b02c654b6a0541cfa60c483592d478630"
   }
 ];
+
+});

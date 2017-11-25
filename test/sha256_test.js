@@ -1,3 +1,6 @@
+define(["sjcl", "sjcl/test/sha256_vectors"], function(sjcl) { var res = [];
+
+res.push(
 new sjcl.test.TestCase("SHA-256 from catameringue", function (cb) {
   if (!sjcl.hash.sha256) {
     this.unimplemented();
@@ -11,4 +14,6 @@ new sjcl.test.TestCase("SHA-256 from catameringue", function (cb) {
     this.require(sjcl.codec.hex.fromBits(out) == kat[i][1], i);
   }
   cb && cb();
-});
+}));
+
+return res;});

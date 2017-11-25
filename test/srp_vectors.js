@@ -1,3 +1,5 @@
+define(["sjcl"], function(sjcl) {
+
 /* Official SRP test vectors. */
 sjcl.test.vector.srp = [
 {
@@ -9,3 +11,5 @@ sjcl.test.vector.srp = [
   known_group_size: 1024
 }
 ];
+
+});

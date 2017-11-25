@@ -1,3 +1,5 @@
+define(["sjcl/core/sjcl"], function(sjcl) {
+
 /** @fileOverview OCB 2.0 implementation
  *
  * @author Emily Stark
@@ -170,3 +172,5 @@ sjcl.mode.ocb2 = {
             x[3]<<1 ^ (x[0]>>>31)*0x87];
   }
 };
+
+});

@@ -1,3 +1,5 @@
+define(["sjcl/core/sjcl"], function(sjcl) {
+
 /** @fileOverview Arrays of bits, encoded as arrays of Numbers.
  *
  * @author Emily Stark
@@ -200,3 +202,5 @@ sjcl.bitArray = {
     return a;
   }
 };
+
+});

@@ -1,3 +1,5 @@
+define(["sjcl"], function(sjcl) {
+
 /**
  *
  * The values for pri and pub have been generated via OpenSSL
@@ -64,3 +66,5 @@ sjcl.test.vector.ecc_pntmul = [
     curve: "k256"
   }
 ];
+
+});

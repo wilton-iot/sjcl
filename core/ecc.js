@@ -1,3 +1,5 @@
+define(["sjcl/core/sjcl"], function(sjcl) {
+
 /**
  * base class for all ecc operations.
  * @namespace
@@ -629,3 +631,5 @@ sjcl.ecc.ecdsa.secretKey.prototype = {
     return "ecdsa";
   }
 };
+
+});

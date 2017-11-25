@@ -1,3 +1,6 @@
+define(["sjcl", "sjcl/test/sha1_huge_test_messages"], function(sjcl) { var res = [];
+
+res.push(
 new sjcl.test.TestCase("SHA1 huge zero vector test", function (cb) {
   if (!sjcl.hash.sha1) {
     this.unimplemented();
@@ -27,4 +30,6 @@ new sjcl.test.TestCase("SHA1 huge zero vector test", function (cb) {
   }
 
   cb && cb();
-});
+}));
+
+return res;});

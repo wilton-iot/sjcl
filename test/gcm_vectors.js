@@ -1,3 +1,5 @@
+define(["sjcl"], function(sjcl) {
+
 sjcl.test.vector.gcm = [
 /** From AES-GCM specification
  * http://csrc.nist.gov/groups/ST/toolkit/BCM/documents/proposedmodes/gcm/gcm-spec.pdf
@@ -129,3 +131,5 @@ sjcl.test.vector.gcm = [
   iv:    "9313225df88406e555909c5aff5269aa6a7a9538534f7da1e4c303d2a318a728c3c0c95156809539fcf0e2429a6b525416aedbf5a0de6a57a637b39b",
   tag:   "a44a8266ee1c8eb0c8b5d4cf5ae9f19a"
 }];
+
+});

@@ -1,3 +1,5 @@
+define(["sjcl", "sjcl/test/bitArray_vectors"], function(sjcl) { var res = [];
+
 (function() {
 
   function word2hex(w) {
@@ -16,6 +18,7 @@
     return a;
   }
 
+  res.push(
   new sjcl.test.TestCase("bitArray single bits", function (cb) {
     if (!sjcl.bitArray) {
       this.unimplemented();
@@ -27,8 +30,9 @@
     this.require((b1|0) === (0x80000000|0), "bitstring '1': " + word2hex(b1));
 
     cb && cb();
-  });
+  }));
 
+  res.push(
   new sjcl.test.TestCase("bitArray concat small bitstrings", function (cb) {
     if (!sjcl.bitArray) {
       this.unimplemented();
@@ -51,9 +55,10 @@
     }
 
     cb && cb();
-  });
+  }));
 
 
+  res.push(
   new sjcl.test.TestCase("bitArray concat, slicing, shifting and clamping", function (cb) {
     if (!sjcl.bitArray) {
       this.unimplemented();
@@ -92,8 +97,9 @@
     }
 
     cb && cb();
-  });
+  }));
 
+  res.push(
   new sjcl.test.TestCase("bitArray byteswap", function (cb) {
     if (!sjcl.bitArray) {
       this.unimplemented();
@@ -110,6 +116,8 @@
     }
 
     cb && cb();
-  });
+  }));
 
 })();
+
+return res;});

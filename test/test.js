@@ -1,4 +1,9 @@
-define(["assert", "sjcl/sjcl", "sjcl/browserTest/browserUtil"], function(assert, sjcl, browserUtil) {
+define([
+    "assert",
+    "sjcl",
+    "sjcl/browserTest/browserUtil",
+    "wilton/utils"
+], function(assert, sjcl, browserUtil, utils) {
 sjcl.test = { vector: {}, all: {} };
 
 /* A bit of a hack.  Because sjcl.test will be reloaded several times
@@ -24,16 +29,11 @@ sjcl.test.TestCase.prototype = {
   
   /** Fail some subtest of this test */
   fail: function (message) {
-    if (message !== undefined) {
-      this.log("fail", "*** FAIL *** " + this.name + ": " + message);
-    } else {
-      this.log("fail", "*** FAIL *** " + this.name);
-    }
-    this.failures ++;
-    browserUtil.allPassed = false;
+    throw new Error(message);
   },
   
   unimplemented: function() {
+    throw new Error("Unimplemented feature, check imports in 'index.js'");
     this.isUnimplemented = true;
   },
   
@@ -76,7 +76,7 @@ sjcl.test.TestCase.prototype = {
   run: function (ntests, i, cb) {
     var thiz = this, repo = {
         update: function(prefix, msg) {
-            print("test: " + prefix + "," + msg);
+            print("test: " + thiz.name + ": " +  prefix + ", " + msg);
         }
     };
     this.startTime = (new Date()).valueOf();

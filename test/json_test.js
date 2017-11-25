@@ -1,6 +1,9 @@
+define(["sjcl"], function(sjcl) { var res = [];
+
 /*
  * Asserts that an object can be encoded to an expected string.
  */
+res.push(
 new sjcl.test.TestCase("JSON Encode Test", function (cb) {
 	if(!sjcl.json) {
 		this.unimplemented();
@@ -26,12 +29,13 @@ new sjcl.test.TestCase("JSON Encode Test", function (cb) {
 		this.fail(e);
 	}
 	cb && cb();
-});
+}));
 
 
 /*
  * Asserts that a JSON string can be decoded to an expected object.
  */
+res.push(
 new sjcl.test.TestCase("JSON Decode Test", function (cb) {
 	if(!sjcl.json) {
 		this.unimplemented();
@@ -69,13 +73,14 @@ new sjcl.test.TestCase("JSON Decode Test", function (cb) {
 	
 	//Tests passed, return.
 	cb && cb();
-});
+}));
 
 
 /*
  * Asserts that an Object can be Encoded to a string that can be decoded to an equivalent object
  * as well as the converse.
  */
+res.push(
 new sjcl.test.TestCase("JSON Commutative Test", function (cb) {
 	if(!sjcl.json) {
 		this.unimplemented();
@@ -123,4 +128,6 @@ new sjcl.test.TestCase("JSON Commutative Test", function (cb) {
 
 	//Tests passed.
 	cb && cb();
-});
+}));
+
+return res;});

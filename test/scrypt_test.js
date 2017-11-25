@@ -1,3 +1,6 @@
+define(["sjcl", "sjcl/test/scrypt_vectors"], function(sjcl) { var res = [];
+
+res.push(
 new sjcl.test.TestCase("scrypt", function (cb) {
   var self = this;
   if (!sjcl.misc.scrypt) {
@@ -20,4 +23,6 @@ new sjcl.test.TestCase("scrypt", function (cb) {
   });
 
   cb && cb();
-});
+}));
+
+return res;});

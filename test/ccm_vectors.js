@@ -1,3 +1,5 @@
+define(["sjcl"], function(sjcl) {
+
 /* Emily generated this file.  I don't know how.
  * It's kind of incomplete.  It only tests tag length = 8, iv length = 8 or 12.
  */
@@ -7002,3 +7004,5 @@ sjcl.test.vector.ccm = [
   ct:    "02abf650c95704c75bc519429333dc0be43848a18185c6e3517736f4c4382f3f54be4a70cfb82c9e66108b6ffb17cef98c3bf3532336a1c7aace0fbbaf2790c97cb6cc32750b09b562", 
   tag:   "40183e477aa03007646ac6af0756b80e"
 }];
+
+});
