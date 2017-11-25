@@ -1,3 +1,5 @@
+define([], function() {
+
 sjcl.test.vector.aes = [ 
   { key: [0x00000000,0x00000000,0x00000000,0x00000000],
     pt:  [0xf34481ec,0x3cc627ba,0xcd5dc3fb,0x08f273e6],
@@ -6234,3 +6236,5 @@ sjcl.test.vector.aes = [
     pt:  [0x00000000,0x00000000,0x00000000,0x00000000],
     ct:  [0x4bf85f1b,0x5d54adbc,0x307b0a04,0x8389adcb] }
 ];
+
+});

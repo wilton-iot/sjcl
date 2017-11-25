@@ -1,4 +1,6 @@
-browserUtil = {};
+define([], function() {
+
+var browserUtil = {};
 
 browserUtil.isNodeJS = (typeof(window) === 'undefined');
 
@@ -7,7 +9,7 @@ browserUtil.isNodeJS = (typeof(window) === 'undefined');
  * specified action.
  */
 browserUtil.pauseAndThen = function (cb) {
-  cb && window.setTimeout(cb, 1);
+    cb();
 };
 
 /**
@@ -110,6 +112,8 @@ browserUtil.loadScripts = function(scriptNames, cbSuccess, cbError) {
 
 /** Write a message to the console */
 browserUtil.write = function(type, message) {
+  print("test: " + message);
+  return;
   var d1 = document.getElementById("print"), d2 = document.createElement("div"), d3 = document.createElement("div");
   d3.className = type;
   d3.appendChild(document.createTextNode(message));
@@ -160,3 +164,7 @@ browserUtil.status = function(message) {
   var d1 = document.getElementById("status");
   d1.replaceChild(document.createTextNode(message), d1.firstChild);
 };
+
+return browserUtil;
+
+});

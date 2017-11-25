@@ -1,3 +1,4 @@
+define(["assert", "sjcl/sjcl", "sjcl/browserTest/browserUtil"], function(assert, sjcl, browserUtil) {
 sjcl.test = { vector: {}, all: {} };
 
 /* A bit of a hack.  Because sjcl.test will be reloaded several times
@@ -41,13 +42,8 @@ sjcl.test.TestCase.prototype = {
   
   /** Require that the first argument is true; otherwise fail with the given message */
   require: function (bool, message) {
-    if (bool) {
+      assert(bool, message);
       this.pass();
-    } else if (message !== undefined) {
-      this.fail(message);
-    } else {
-      this.fail("requirement failed");
-    }
   },
 
   /** Pause and then take the specified action. */
@@ -78,7 +74,11 @@ sjcl.test.TestCase.prototype = {
 
   /** Run the test. */
   run: function (ntests, i, cb) {
-    var thiz = this, repo = this.log("info", "Running " + this.name + "...");
+    var thiz = this, repo = {
+        update: function(prefix, msg) {
+            print("test: " + prefix + "," + msg);
+        }
+    };
     this.startTime = (new Date()).valueOf();
     this.pauseAndThen(function () {
       thiz.doRun(function () {
@@ -101,7 +101,7 @@ sjcl.test.run = function (tests, callback) {
       }
     }
   }
-  
+
   browserUtil.cpsMap(function (t, i, n, cb) {
     sjcl.test.all[tests[i]].run(n, i+1, cb);
   }, tests, true, callback);
@@ -132,3 +132,5 @@ sjcl.codec.hex = sjcl.codec.hex ||
     return sjcl.bitArray.clamp(out, len*4);
   }
 };
+
+});

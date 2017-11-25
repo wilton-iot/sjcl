@@ -1,4 +1,5 @@
-new sjcl.test.TestCase("AES official known-answer tests", function (cb) {
+define(["sjcl/sjcl", "sjcl/test/test", "sjcl/test/aes_vectors"], function(sjcl) {
+return new sjcl.test.TestCase("AES official known-answer tests", function (cb) {
   if (!sjcl.cipher.aes) {
     this.unimplemented();
     cb && cb();
@@ -15,4 +16,5 @@ new sjcl.test.TestCase("AES official known-answer tests", function (cb) {
     this.require(sjcl.bitArray.equal(aes.decrypt(tv.ct), tv.pt), "decrypt "+len+" #"+i);
   }
   cb && cb();
+});
 });
