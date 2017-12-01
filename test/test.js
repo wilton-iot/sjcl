@@ -1,9 +1,8 @@
 define([
     "assert",
     "sjcl",
-    "sjcl/browserTest/browserUtil",
-    "wilton/utils"
-], function(assert, sjcl, browserUtil, utils) {
+    "sjcl/browserTest/browserUtil"
+], function(assert, sjcl, browserUtil) {
 sjcl.test = { vector: {}, all: {} };
 
 /* A bit of a hack.  Because sjcl.test will be reloaded several times

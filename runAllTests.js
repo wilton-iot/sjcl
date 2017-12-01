@@ -1,10 +1,9 @@
 
 define([
     "lodash/forEach",
-    "wilton/misc",
     "sjcl",
     "sjcl/test/test"
-], function(forEach, misc, sjcl) {
+], function(forEach, sjcl) {
 
     // prng init
     sjcl.random.addEntropy(42, 1024);
@@ -77,7 +76,9 @@ define([
 
     // JIT-only
 
-    if ("jsc" === misc.wiltonConfig().defaultScriptEngine) {
+    var browser = "undefined" === typeof(WILTON_wiltoncall);
+
+    if (browser || "jsc" === WILTON_requiresync("wilton/misc").wiltonConfig().defaultScriptEngine) {
 
         require(["sjcl/test/bn_test"], function(tests) {
             forEach(tests, function(ts) { ts.run(); });
