@@ -1,3 +1,5 @@
+define(["sjcl", "sjcl/test/test"], function(sjcl) {
+
 /* Official ECDSA test vectors.
  *
  * Source:
@@ -1118,3 +1120,5 @@ sjcl.test.vector.ecdsa = {
     }
   ]
 };
+
+});

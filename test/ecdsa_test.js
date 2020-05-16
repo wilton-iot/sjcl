@@ -1,3 +1,6 @@
+define(["sjcl", "sjcl/test/test", "sjcl/test/ecc_vectors"], function(sjcl) { var res = [];
+
+res.push(
 new sjcl.test.TestCase("ECDSA test", function (cb) {
   if (!sjcl.ecc) {
     this.unimplemented();
@@ -126,4 +129,6 @@ new sjcl.test.TestCase("ECDSA test", function (cb) {
   }
   
   cb && cb();
-});
+}));
+
+return res;});

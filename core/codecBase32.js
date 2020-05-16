@@ -1,3 +1,5 @@
+define(["sjcl/core/sjcl", "sjcl/core/bitArray"], function(sjcl) {
+
 /** @fileOverview Bit array codec implementations.
  *
  * @author Nils Kenneweg
@@ -89,3 +91,5 @@ sjcl.codec.base32hex = {
   fromBits: function (arr, _noEquals) { return sjcl.codec.base32.fromBits(arr,_noEquals,1); },
   toBits: function (str) { return sjcl.codec.base32.toBits(str,1); }
 };
+
+});

@@ -1,3 +1,5 @@
+define(["sjcl/core/sjcl", "sjcl/core/bitArray", "sjcl/core/codecString"], function(sjcl) {
+
 /** @fileOverview Javascript RIPEMD-160 implementation.
  *
  * @author Artem S Vybornov <vybornov@gmail.com>
@@ -207,3 +209,5 @@ function _block(X) {
 }
 
 })();
+
+});

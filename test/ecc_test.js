@@ -1,3 +1,6 @@
+define(["sjcl", "sjcl/test/test", "sjcl/test/ecc_vectors"], function(sjcl) { var res = [];
+
+res.push(
 new sjcl.test.TestCase("ECC point multiplication test", function (cb) {
   if (!sjcl.ecc) {
     this.unimplemented();
@@ -12,8 +15,9 @@ new sjcl.test.TestCase("ECC point multiplication test", function (cb) {
     this.require(pnt.x.equals(new sjcl.bn(vec.x)) && pnt.y.equals(new sjcl.bn(vec.y)), vec.curve+" failed");
   }
   cb && cb();
-});
+}));
 
+res.push(
 new sjcl.test.TestCase("ECC jac multiplication regression test", function (cb) {
   if (!sjcl.ecc) {
     this.unimplemented();
@@ -35,8 +39,9 @@ new sjcl.test.TestCase("ECC jac multiplication regression test", function (cb) {
   this.require(doublJacPoint.isValid(), "doubled point invalid");
 
   cb && cb();
-});
+}));
 
+res.push(
 new sjcl.test.TestCase("All curves should have a valid G", function (cb) {
   if (!sjcl.ecc) {
     this.unimplemented();
@@ -56,8 +61,9 @@ new sjcl.test.TestCase("All curves should have a valid G", function (cb) {
   }
 
   cb && cb();
-});
+}));
 
+res.push(
 new sjcl.test.TestCase("Multiplication regression test part 2", function (cb) {
   if (!sjcl.ecc) {
     this.unimplemented();
@@ -75,4 +81,6 @@ new sjcl.test.TestCase("Multiplication regression test part 2", function (cb) {
   }
 
   cb && cb();
-});
+}));
+
+return res;});

@@ -1,3 +1,6 @@
+define(["sjcl", "sjcl/browserTest/browserUtil", "sjcl/test/test", "sjcl/test/ccm_vectors"], function(sjcl, browserUtil) { var res = [];
+
+res.push(
 new sjcl.test.TestCase("CCM mode tests", function (cb) {
   if (!sjcl.cipher.aes || !sjcl.mode.ccm) {
     this.unimplemented();
@@ -28,4 +31,6 @@ new sjcl.test.TestCase("CCM mode tests", function (cb) {
     }
     cbb();
   }, 0, kat.length / 100, true, cb);
-});
+}));
+
+return res;});

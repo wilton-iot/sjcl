@@ -1,3 +1,8 @@
+define(["sjcl/core/sjcl", "sjcl/core/cbc", "sjcl/core/ccm",
+        "sjcl/core/ccmArrayBuffer", "sjcl/core/codecBase64",
+        "sjcl/core/codecString", "sjcl/core/ctr", "sjcl/core/ecc", "sjcl/core/gcm",
+        "sjcl/core/ocb2", "sjcl/core/ocb2progressive", "sjcl/core/random"], function(sjcl) {
+
 /** @fileOverview Convenience functions centered around JSON encapsulation.
  *
  * @author Emily Stark
@@ -325,3 +330,5 @@ sjcl.misc.cachedPbkdf2 = function (password, obj) {
   c[salt] = c[salt] || sjcl.misc.pbkdf2(password, salt, obj.iter);
   return { key: c[salt].slice(0), salt:salt.slice(0) };
 };
+
+});

@@ -1,3 +1,5 @@
+define(["sjcl/core/sjcl", "sjcl/core/sha256"], function(sjcl) {
+
 /** @fileOverview HMAC implementation.
  *
  * @author Emily Stark
@@ -59,3 +61,5 @@ sjcl.misc.hmac.prototype.digest = function () {
 
   return result;
 };
+
+});

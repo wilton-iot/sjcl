@@ -1,3 +1,5 @@
+define(["sjcl/core/sjcl", "sjcl/core/bitArray", "sjcl/core/codecString", "sjcl/core/hmac", "sjcl/core/sha256"], function(sjcl) {
+
 /** @fileOverview HKDF implementation.
  *
  * @author Steve Thomas
@@ -44,3 +46,5 @@ sjcl.misc.hkdf = function (ikm, keyBitLength, salt, info, Hash) {
   }
   return sjcl.bitArray.clamp(ret, keyBitLength);
 };
+
+});

@@ -1,3 +1,5 @@
+define(["sjcl/core/sjcl"], function(sjcl) {
+
 /** @fileOverview Low-level AES implementation.
  *
  * This file contains a low-level implementation of AES, optimized for
@@ -204,3 +206,4 @@ sjcl.cipher.aes.prototype = {
   }
 };
 
+});

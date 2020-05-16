@@ -1,3 +1,5 @@
+define(["sjcl", "sjcl/test/test"], function(sjcl) {
+
 /**
  *
  * The values for pri and pub have been generated via OpenSSL
@@ -115,3 +117,4 @@ sjcl.test.vector.ecc_mul = [
      curve: "k256"
    }
  ];
+});

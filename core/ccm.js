@@ -1,3 +1,5 @@
+define(["sjcl/core/sjcl", "sjcl/core/bitArray"], function(sjcl) {
+
 /** @fileOverview CCM mode implementation.
  *
  * Special thanks to Roy Nicholson for pointing out a bug in our
@@ -218,3 +220,5 @@ sjcl.mode.ccm = {
     return { tag:tag, data:w.clamp(data,bl) };
   }
 };
+
+});

@@ -1,10 +1,13 @@
+define(["sjcl", "sjcl/test/test", "sjcl/test/aes_vectors"], function(sjcl) { var res = [];
+    
+res.push(
 new sjcl.test.TestCase("AES official known-answer tests", function (cb) {
   if (!sjcl.cipher.aes) {
     this.unimplemented();
     cb && cb();
     return;
   }
-  
+
   var i, kat = sjcl.test.vector.aes, tv, len, aes;
   
   for (i=0; i<kat.length; i++) {
@@ -15,4 +18,6 @@ new sjcl.test.TestCase("AES official known-answer tests", function (cb) {
     this.require(sjcl.bitArray.equal(aes.decrypt(tv.ct), tv.pt), "decrypt "+len+" #"+i);
   }
   cb && cb();
-});
+}));
+
+return res;});

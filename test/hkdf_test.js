@@ -1,3 +1,6 @@
+define(["sjcl", "sjcl/test/test", "sjcl/test/hkdf_vectors"], function(sjcl) { var res = [];
+
+res.push(
 new sjcl.test.TestCase("HKDF official test vectors", function (cb) {
   if (!sjcl.misc.hkdf || !sjcl.misc.hmac) {
     this.unimplemented();
@@ -24,4 +27,6 @@ new sjcl.test.TestCase("HKDF official test vectors", function (cb) {
     this.require(out == tv.key, "hkdf #" + i);
   }
   cb && cb();
-});
+}));
+
+return res;});

@@ -1,3 +1,5 @@
+define(["sjcl", "sjcl/test/test"], function(sjcl) {
+
 /* conventional test vectors */
 sjcl.test.vector.ripemd160 = 
 [
@@ -11,3 +13,5 @@ sjcl.test.vector.ripemd160 =
 ["The quick brown fox jumps over the lazy dog", "37f332f68db77bd9d7edd4969571ad671cf9dd3b"],
 ["The quick brown fox jumps over the lazy cog", "132072df690933835eb8b6ad0b77e7b6f14acad7"],
 ];
+
+});

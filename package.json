@@ -2,7 +2,7 @@
   "name": "sjcl",
   "version": "1.0.8",
   "description": "Stanford Javascript Crypto Library",
-  "main": "sjcl.js",
+  "main": "index.js",
   "author": "bitwiseshiftleft",
   "license": "(BSD-2-Clause OR GPL-2.0-only)",
   "homepage": "https://github.com/bitwiseshiftleft/sjcl",
@@ -26,5 +26,22 @@
   "devDependencies": {
     "eslint": "^2.11.1",
     "jsdoc": "3.4.0"
+  },
+  "wilton": {
+    "excludes": [
+        "browserTest",
+        "compress",
+        "core/exports.js",
+        "core/codecZ85.js",
+        "demo",
+        "README",
+        "test",
+        "Makefile",
+        "config.mk",
+        "configure",
+        "jsdoc.conf.json",
+        "runAllTests.js",
+        "sjcl.js"
+    ]
   }
 }

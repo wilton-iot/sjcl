@@ -1,3 +1,6 @@
+define(["sjcl", "sjcl/test/test"], function(sjcl) { var res = [];
+
+res.push(
 new sjcl.test.TestCase("ECDH test", function (cb) {
   if (!sjcl.ecc) {
     this.unimplemented();
@@ -34,4 +37,6 @@ new sjcl.test.TestCase("ECDH test", function (cb) {
     this.fail(e);
   }
   cb && cb();
-});
+}));
+
+return res;});

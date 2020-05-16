@@ -1,3 +1,5 @@
+define(["sjcl/core/sjcl", "sjcl/core/bitArray", "sjcl/core/bn", "sjcl/core/sha1"], function(sjcl) {
+
 /** @fileOverview Javascript SRP implementation.
  *
  * This file contains a partial implementation of the SRP (Secure Remote
@@ -224,3 +226,5 @@ sjcl.keyexchange.srp = {
   }
 
 };
+
+});

@@ -1,3 +1,5 @@
+define(["sjcl", "sjcl/test/test"], function(sjcl) {
+
 // RFC 5869 Appendix A. Test Vectors
 
 // A.1. Test Case 1: Basic test case with SHA-256
@@ -58,3 +60,5 @@ sjcl.test.vector.hkdf = [
   hash:      "sha1",
   key:       "2c91117204d745f3500d636a62f64f0ab3bae548aa53d423b0d1f27ebba6f5e5673a081d70cce7acfc48"
 }];
+
+});

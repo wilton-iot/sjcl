@@ -1,3 +1,5 @@
+define(["sjcl", "sjcl/test/test"], function(sjcl) {
+
 sjcl.test.vector.ocb2 = [
 /* Official OCB-mode test vectors */
 { key:   "000102030405060708090A0B0C0D0E0F",
@@ -88,3 +90,5 @@ sjcl.test.vector.ocb2 = [
   tag:   "65A92715A028ACD4AE6AFF4BFAA0D396"
 }
 ];
+
+});

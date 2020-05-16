@@ -1,3 +1,4 @@
+define(["sjcl/core/sjcl", "sjcl/core/bitArray", "sjcl/core/random"], function(sjcl) {
 // Thanks to Colin McRae and Jonathan Burns of ionic security
 // for reporting and fixing two bugs in this file!
 
@@ -736,3 +737,5 @@ sjcl.bn.random = function(modulus, paranoia) {
     }
   }
 };
+
+});

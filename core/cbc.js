@@ -1,3 +1,5 @@
+define(["sjcl/core/sjcl", "sjcl/core/bitArray"], function(sjcl) {
+
 /** @fileOverview CBC mode implementation
  *
  * @author Emily Stark
@@ -113,3 +115,5 @@ sjcl.beware["CBC mode is dangerous because it doesn't protect message integrity.
     }
   };
 };
+
+});

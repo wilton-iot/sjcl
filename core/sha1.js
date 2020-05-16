@@ -1,3 +1,5 @@
+define(["sjcl/core/sjcl", "sjcl/core/bitArray", "sjcl/core/codecString"], function(sjcl) {
+
 /** @fileOverview Javascript SHA-1 implementation.
  *
  * Based on the implementation in RFC 3174, method 1, and on the SJCL
@@ -189,3 +191,5 @@ sjcl.hash.sha1.prototype = {
    h[4] = (h[4]+e) |0;
   }
 };
+
+});

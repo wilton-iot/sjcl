@@ -1,3 +1,5 @@
+define(["sjcl/core/sjcl", "sjcl/core/bitArray"], function(sjcl) {
+
 /** @fileOverview GCM mode implementation.
  *
  * @author Juho Vähä-Herttua
@@ -185,3 +187,5 @@ sjcl.mode.gcm = {
     return { tag:w.bitSlice(tag, 0, tlen), data:data };
   }
 };
+
+});

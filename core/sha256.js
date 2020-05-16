@@ -1,3 +1,5 @@
+define(["sjcl/core/sjcl", "sjcl/core/bitArray", "sjcl/core/codecString"], function(sjcl) {
+
 /** @fileOverview Javascript SHA-256 implementation.
  *
  * An older version of this implementation is available in the public
@@ -227,4 +229,4 @@ sjcl.hash.sha256.prototype = {
   }
 };
 
-
+});

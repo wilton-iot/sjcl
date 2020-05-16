@@ -1,3 +1,5 @@
+define(["sjcl", "sjcl/test/test"], function(sjcl) {
+
 /* Test vectors for CTR mode.
  * 
  * Generated with opensll. Example line:
@@ -90,3 +92,5 @@ sjcl.test.vector.ctr = [
     pt:  '77f1a3c4e2abe13f46e978d37eef76eca76561cbb8b5ad55a07300b32e6df3fe',
     ct:  '9b07440ffb0d8136d0adf8b93784bf24fbabc75def9806b33a7d06887204151e'}
 ];
+
+});

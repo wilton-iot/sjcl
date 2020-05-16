@@ -1,3 +1,5 @@
+define(["sjcl/core/sjcl", "sjcl/core/pbkdf2"], function(sjcl) {
+
 /** scrypt Password-Based Key-Derivation Function.
  *
  * @param {bitArray|String} password  The password.
@@ -144,3 +146,5 @@ sjcl.misc.scrypt.blockxor = function(S, Si, D, Di, len) {
 
   for (i = 0; i < len; i++) D[Di + i] = (D[Di + i] ^ S[Si + i]) | 0;
 };
+
+});

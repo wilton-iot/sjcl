@@ -1,3 +1,5 @@
+define(["sjcl/core/sjcl", "sjcl/core/bitArray"], function(sjcl) {
+
 /** @fileOverview Bit array codec implementations.
  *
  * @author Emily Stark
@@ -31,3 +33,4 @@ sjcl.codec.hex = {
   }
 };
 
+});
