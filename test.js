@@ -1,48 +1,63 @@
+/*
+ * Copyright 2020, alex at staticlibs.net
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
 define([
     "is-in-browser",
     "sjcl",
     // a - b
-    "sjcl/test/aes_test",
-    "sjcl/test/bitArray_test",
-    "sjcl/test/bn_test",
+    "./test/aes_test",
+    "./test/bitArray_test",
+    "./test/bn_test",
     // c
-    "sjcl/test/cbc_test",
-    "sjcl/test/ccm_test",
-    "sjcl/test/ccm_arraybuffer_test",
-    "sjcl/test/codec_arraybuffer_test",
-    "sjcl/test/ctr_test",
+    "./test/cbc_test",
+    "./test/ccm_test",
+    "./test/ccm_arraybuffer_test",
+    "./test/codec_arraybuffer_test",
+    "./test/ctr_test",
     // e - g
-    "sjcl/test/ecc_conv",
-    "sjcl/test/ecc_test",
-    "sjcl/test/ecdh_test",
-    "sjcl/test/ecdsa_test",
-    "sjcl/test/gcm_test",
+    "./test/ecc_conv",
+    "./test/ecc_test",
+    "./test/ecdh_test",
+    "./test/ecdsa_test",
+    "./test/gcm_test",
     // h - o
-    "sjcl/test/hkdf_test",
-    "sjcl/test/hmac_test",
-    "sjcl/test/json_test",
-    "sjcl/test/ocb2_test",
-    "sjcl/test/ocb2progressive_test",
+    "./test/hkdf_test",
+    "./test/hmac_test",
+    "./test/json_test",
+    "./test/ocb2_test",
+    "./test/ocb2progressive_test",
     // p - s
-    "sjcl/test/pbkdf2_test",
-    "sjcl/test/ripemd160_test",
-    "sjcl/test/scrypt_test",
-    "sjcl/test/srp_test",
+    "./test/pbkdf2_test",
+    "./test/ripemd160_test",
+    "./test/scrypt_test",
+    "./test/srp_test",
     // sha1
-    "sjcl/test/sha1_huge_test",
-    "sjcl/test/sha1_test",
-    "sjcl/test/sha1_test_long_messages",
+    "./test/sha1_huge_test",
+    "./test/sha1_test",
+    "./test/sha1_test_long_messages",
     // sha256
-    "sjcl/test/sha256_huge_test",
-    "sjcl/test/sha256_test",
-    "sjcl/test/sha256_test_brute_force",
-    "sjcl/test/sha256_test_long_messages",
+    "./test/sha256_huge_test",
+    "./test/sha256_test",
+    "./test/sha256_test_brute_force",
+    "./test/sha256_test_long_messages",
     // sha512
-    "sjcl/test/sha512_huge_test",
-    "sjcl/test/sha512_test",
-    "sjcl/test/sha512_test_brute_force",
-    "sjcl/test/sha512_test_long_messages"
+    "./test/sha512_huge_test",
+    "./test/sha512_test",
+    "./test/sha512_test_brute_force",
+    "./test/sha512_test_long_messages"
 ], function(
         isInBrowser, sjcl,
         // a - b
